@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Lists')">
+</head>
+<body>
+    <h3>List of Names:</h3>
+        <ul th:if="true">
+            <li th:each="name : ${listOfNames}" th:text="${name}"></li>
+
+        </ul>
+        <div th:if="true">
+            This is displayed
+        </div>
+        <div th:if="${role == 'admin'}">
+            This is the admin area
+            <button>Danger Button</button>
+        </div>
+        <div th:if="${role == 'editor'}">
+            This is the admin area
+                    <button>Normal Stuff</button>
+        </div>
+        <div th:if="false">
+             This is not displayed
+        </div>
+        <div>
+             Everyone sees this
+        </div>
+
+        <input id="myHiddenData" type="hidden" th:value="${listOfNames}" />
+  
+</body>
+</html>

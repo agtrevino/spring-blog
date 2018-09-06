@@ -1,0 +1,12 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pth="http://www.w3.org/1999/html">
+<head th:replace="fragments/head :: head('Post')">
+</head>
+<body>
+    <h1>Post <span th:text="${id}"></span></h1>
+    <hr/>
+    <h3 th:text="${post.title}"></h3>
+    <p th:text="${post.body}"></p>
+
+</body>
+</html>
